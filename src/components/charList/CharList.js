@@ -2,9 +2,9 @@ import {useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
-import useMarvelService from '../../services/MarvelService';
 
 import './charList.scss';
 
@@ -65,7 +65,7 @@ const CharList = (props) => {
             }
         
             return (
-                <CSSTransition key = {item.id} timeout={500} classNames="char_item">
+                <CSSTransition key = {item.id} timeout={500} classNames="char__item">
                     <li 
                         className="char__item"
                         tabIndex={0}
